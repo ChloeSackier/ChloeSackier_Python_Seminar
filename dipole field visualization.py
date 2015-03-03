@@ -28,27 +28,43 @@ def bob(charge, location):
 
         #calculated E_tot
 
+# CHECK THE FUNCTION ABOVE see comment in the other script
+
+
+# try to draw the charges as spheres :)
+
 a = bob((0, 1, 0, 1), (0, 0, 0))
 b = bob((0, -1, 0, -1), (0, 0, 0))
 
 E_ab = [a[0]+b[0], a[1]+b[1], a[2]+b[2]]
 
-a_1 = arrow (pos = vector(0,0,0), axis=vector ((1.0/10000000)*E_ab[0], 0, 0), color = color.red)
-a_2 = arrow (pos = vector(0,0,0), axis=vector (0, (1.0/10000000)*E_ab[1], 0), color = color.red)
-a_3 = arrow (pos = vector(0,0,0), axis=vector (0, 0, (1.0/10000000)*E_ab[2]), color = color.red)
+a_1 = arrow (pos = vector(0,0,0), axis=vector ((1.0/10000000)*E_ab[0], 0, 0), color = color.red,shaftwidth=20
+        )
+a_2 = arrow (pos = vector(0,0,0), axis=vector (0, (1.0/10000000)*E_ab[1], 0), color = color.red, shaftwidth=20)
+a_3 = arrow (pos = vector(0,0,0), axis=vector (0, 0, (1.0/10000000)*E_ab[2]), color = color.red,shaftwidth=20)
+
+# Make a prediction, in which directionis the resulting E field at the origin poynting? You can change the
+# arrow length/thickness using length, shaftwidth, headwidth
 
 print E_ab
 
-#defined arrows to be components of E field, note to grader: the first arrows are subject to evil computer magic and refuse to coexist with the peaceful green arrows, the green arrows work perfectly fine in their pacifist world, I promise
+#defined arrows to be components of E field, note to grader:
+#the first arrows are subject to evil computer magic and refuse
+#to coexist with the peaceful green arrows, the green arrows work perfectly fine in their pacifist world, I promise
+# The evil red arrows were simply too thick! Try to fix it!
 
-c = bob((0, 1, 0, 1), (1, 3, 5))
-d = bob((0, -1, 0, -1), (1, 3, 5))
+
+c = bob((0, 1, 0, 1), (2, 1, 0))
+d = bob((0, -1, 0, -1), (2, 1, 0 ))
 
 E_cd = [c[0]+d[0], c[1]+d[1], c[2]+d[2]]
 
 b_1 = arrow (pos = vector(1,3,5), axis=vector ((1.0/10000000)*E_cd[0], 0, 0), color = color.green)
 b_2 = arrow (pos = vector(1,3,5), axis=vector (0, (1.0/10000000)*E_cd[1], 0), color = color.green)
 b_3 = arrow (pos = vector(1,3,5), axis=vector (0, 0, (1.0/10000000)*E_cd[2]), color = color.green)
+
+#Draw the resulting vector!
+# Add the other points
 
 print E_cd
 

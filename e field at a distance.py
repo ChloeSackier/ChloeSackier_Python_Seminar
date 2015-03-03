@@ -1,3 +1,5 @@
+# Put here the info about the file! You can download the template from Stellar
+
 from math import sqrt, pi
 from const import E0
 k = 1.0 / (4 * pi * E0)
@@ -22,3 +24,6 @@ def bob(charge, location):
     print 'E =', E_tot, 'N/C'
 
 bob((2, 7, -2, -1), (6, 3, -4000000000))
+
+# Are you sure? Check your signs! Try something that you can predict e.g.
+#  bob((0,0,0),(0,1,0))
