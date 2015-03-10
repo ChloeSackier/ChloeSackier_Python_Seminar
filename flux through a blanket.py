@@ -13,15 +13,18 @@ def E(q, P):
 
 dx = 10e-3
 dy = 10e-3
+flux = 0
 
 for i in xrange(int(2/ (dx))):
     for j in xrange(int(2/ (dy))):
-        P = [i-1, j-1, 1]
-q = [0,0,0,10e-6]
-print E(q, P)[0]
-flux = 0
-flux = flux +E(q, P) [2]*dx*dy
-print i,j,flux
+        y = j * dy - 1
+        x = i * dx - 1
+        P = [x, y, 1]
+        q = [0,0,0,10e-6]
+##        print E(q, P)[2]
+        flux = flux + E(q, P)[2] * dx * dy
+        
+print flux
 
 
 sigma = 10e-3
