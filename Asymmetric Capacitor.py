@@ -25,9 +25,18 @@ class asymmetric_cap(capacitor):                    #class capacitor
             Esph = Q /(E0 * 4 * pi * x **2)
             phi += (Ecyl + Esph) * dx 
 
-        self.capacitance = Q / (phi)                    # capacitance = Q/V         
+        self.capacitance = Q / (phi)                     # capacitance = Q/V         
         self.q = 0.0
         print phi
 
 
+class super_cap(capacitor):                              #part 2
+    def __init__(self, cap1, cap2, parallel, ref):
+        self.cap1 = 
+        self.cap2 =
+        self.parallel = 
+        self.ref = ref
 
+ def charge(self, voltage):
+        self.q = self.capacitance * voltage             # charge class
+        self.ref[self] = self.q
