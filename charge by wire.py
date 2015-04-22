@@ -1,4 +1,4 @@
-from math import pi                     
+from math import pi
 import numpy as np
 dt = 1e-3
 numPoints = int(1e4)
@@ -12,6 +12,10 @@ mu_0 = 8.85e-12
 startPos = np.array((1.0, 1.0, 1.0))         #Initial conditions
 startVel = np.array((10.0, 5.0, 5.0))
 
+# It's a Gauss' Law problem. You draw a cylinder around the wire,
+# then calculate the electric field from the flux. Or you could do an integral
+# analytically from -pi/2 to pi/2 and calculate the electric field that way.
+# That's why we gave you the wire's charge density.
 ##E = wait how do I define an electric field here?
 ##Fe = q * E
 

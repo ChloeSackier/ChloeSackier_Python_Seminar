@@ -36,6 +36,8 @@ l = length of solenoid
 B_sol_inside = (mu_0 * I * N)/l                  #I know we can calculate B_inside from Ampere's and B_outside from Biot-Savart, not sure how to combine here
 return B_sol
 
+# Have you considered using the one-ring function you wrote up above to add several rings'
+# magnetic fields together? This would work both inside and outside the solenoid.
 def B_sol_outside(0.0,0.0,z):                                           # For the moment, we only vary z
     P = np.array((0.0, 0.0, z))
     B = np.array((0.0, 0.0, 0.0))
